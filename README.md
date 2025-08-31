@@ -1,5 +1,5 @@
 # USDA-Food-Database
-this project's aim is to apply some data cleaning and to induce some changes in the way the data is structured in order to make it more usable
+this project's aim is to apply some data cleaning and to induce some changes in the way the data is structured in order to make it more usable and finally a chart showing the food groups with the most of zinc quantity
 
 ### Data source and description
 The US Department of Agriculture (USDA) makes available a database of food nutrient informations, each food has a list of identifying attributesalong with two lists of nutrients and
@@ -13,8 +13,7 @@ improt json
 db=json.load(open("database.json"))
 ```
 since this data is not so much usable in it's current state, we have to induce some changes as each entry in the database is a dictionnary containing informations about
- a certain food and in the food's dictionnary there's a field "nutrients" it's a list containing dictionnaries one for each nutrient, so we create separate databases from our db one for the nutrients another one for the
- foods and i'm not gonna take the whole fields existing in the list but only the food names, group, ID, and manufacturer
+ a certain food and in the food's dictionnary there's a field "nutrients" it's a list containing dictionnaries one for each nutrient, so we create separate databases from our db one for the nutrients another one for the foods informations and i'm not gonna take the whole fields existing  but only the food names, group, ID, and manufacturer
  ```python
 nutrients=pd.DataFrame(db[0]["nutrients"])
 info_keys = ["description", "group", "id", "manufacturer"]
