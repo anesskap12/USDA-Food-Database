@@ -73,7 +73,7 @@ with the above operation ne we can get tables of the foods having the densiest a
 ```python
 max_foods.loc["Amino Acids"]["food"]
 max_foods.loc["Vitamins"]["food"]
-
+```
 
 
 
