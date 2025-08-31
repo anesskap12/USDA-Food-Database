@@ -65,14 +65,15 @@ or if i'm interested in the most dense foods for a specific type of nutrient i c
 
 ```python
 by_nutrient = ndata.groupby(["nutgroup", "nutrient"])
-
 def get_maximum(x):
     return x.loc[x.value.idxmax()]
-
-max_foods = by_nutrient.apply(get_maximum, include_group=False)[["value", "food"]]
+max_foods = by_nutrient.apply(get_maximum,include_groups=False)[["value", "food"]]
 max_foods["food"] = max_foods["food"].str[:50]
 ```
-
+with the above operation ne we can get tables of the foods having the densiest amounts of whatever nutrient we want 
+```python
+max_foods.loc["Amino Acids"]["food"]
+max_foods.loc["Vitamins"]["food"]
 
 
 
