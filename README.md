@@ -60,6 +60,7 @@ figure 1 : median zinc values by food group :
 
 <img width="866" height="418" alt="cp5" src="https://github.com/user-attachments/assets/f430fcfd-2f85-4914-a983-4ee9a72a885a" />
 
+and as it can be clearly seen the foods containing the most of zinc are the Beef products, followed by lamb veal and game products.
 or if i'm interested in the most dense foods for a specific type of nutrient i can use the idxmax or argmax Series methods 
 
 ```python
